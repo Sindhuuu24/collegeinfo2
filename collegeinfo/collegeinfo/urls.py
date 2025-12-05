@@ -17,10 +17,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from teacherinfo.views import landing
+<<<<<<< HEAD
 from teacherinfo.views import registration
+=======
+from teacherinfo.views import dashboard
+>>>>>>> dashboard
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('landing/', landing, name='landing'),
+<<<<<<< HEAD
     path('registration/', registration, name='registration'),
+=======
+    path('dashboard/',dashboard,name='dashboard'),
+>>>>>>> dashboard
 ]
