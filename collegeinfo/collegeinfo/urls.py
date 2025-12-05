@@ -17,8 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from teacherinfo.views import landing
+from teacherinfo.views import registration
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('landing/', landing, name='landing'),
+    path('registration/', registration, name='registration'),
 ]
