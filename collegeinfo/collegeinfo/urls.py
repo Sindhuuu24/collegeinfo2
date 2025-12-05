@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from teacherinfo.views import landing
 <<<<<<< HEAD
+<<<<<<< HEAD
 from teacherinfo.views import registration
 =======
 from teacherinfo.views import dashboard
@@ -31,4 +32,11 @@ urlpatterns = [
 =======
     path('dashboard/',dashboard,name='dashboard'),
 >>>>>>> dashboard
+=======
+from teacherinfo.views import login
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('landing/', landing, name='landing'),
+    path('login/', login, name='login'),
+>>>>>>> login
 ]
