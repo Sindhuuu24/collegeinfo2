@@ -24,5 +24,7 @@ def login(request):
     return render(request, 'login.html')
 def home(request):
     return render(request, 'home.html')
+def department(request):
+    return render(request, 'department.html')
 # Create your views here.
 

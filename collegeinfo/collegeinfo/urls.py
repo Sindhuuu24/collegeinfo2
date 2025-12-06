@@ -24,6 +24,7 @@ from teacherinfo.views import register
 from teacherinfo.views import registerinfo
 from teacherinfo.views import login
 from teacherinfo.views import home
+from teacherinfo.views import department
 
 
 urlpatterns = [
@@ -38,4 +39,5 @@ urlpatterns = [
     path('landing/', landing, name='landing'),
     path('login/', login, name='login'),
     path('home/', home, name='home'),
+    path('department/', department, name='department'),
 ]
