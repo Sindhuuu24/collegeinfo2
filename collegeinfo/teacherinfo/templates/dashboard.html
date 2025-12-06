@@ -17,15 +17,23 @@
             min-height: 100vh;
         }
 
+<<<<<<< HEAD
         /* Navigation */
         nav {
             background: rgba(255, 255, 255, 0.95);
             padding: 1rem 2rem;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+=======
+        header {
+            background-color: #2c3e50;
+            padding: 1rem 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+>>>>>>> 349b643d65a5e6f0ab2f65bd4902ca701b7a9315
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
+<<<<<<< HEAD
             gap: 1rem;
         }
 
@@ -51,19 +59,34 @@
 
         .nav-menu a:hover {
             color: #667eea;
+=======
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 1.8rem;
+            font-weight: bold;
+>>>>>>> 349b643d65a5e6f0ab2f65bd4902ca701b7a9315
         }
 
         .auth-buttons {
             display: flex;
             gap: 1rem;
+<<<<<<< HEAD
             flex-wrap: wrap;
         }
 
         .login-btn, .register-btn {
+=======
+        }
+
+        .btn {
+>>>>>>> 349b643d65a5e6f0ab2f65bd4902ca701b7a9315
             padding: 0.7rem 1.5rem;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+<<<<<<< HEAD
             font-weight: 600;
             transition: all 0.3s ease;
             text-decoration: none;
@@ -119,6 +142,61 @@
         .dashboard-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+=======
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-login {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .btn-login:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        .btn-register {
+            background-color: #27ae60;
+            color: white;
+        }
+
+        .btn-register:hover {
+            background-color: #229954;
+            transform: translateY(-2px);
+        }
+
+        nav {
+            background-color: #34495e;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            padding: 1rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            flex: 1;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #667eea;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+>>>>>>> 349b643d65a5e6f0ab2f65bd4902ca701b7a9315
             gap: 2rem;
             margin-top: 2rem;
         }
@@ -127,14 +205,20 @@
             background: white;
             border-radius: 10px;
             padding: 2rem;
+<<<<<<< HEAD
             text-align: center;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             cursor: pointer;
+=======
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+>>>>>>> 349b643d65a5e6f0ab2f65bd4902ca701b7a9315
         }
 
         .card:hover {
             transform: translateY(-10px);
+<<<<<<< HEAD
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
@@ -145,11 +229,19 @@
 
         .card h2 {
             color: #333;
+=======
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            color: #2c3e50;
+>>>>>>> 349b643d65a5e6f0ab2f65bd4902ca701b7a9315
             margin-bottom: 1rem;
             font-size: 1.5rem;
         }
 
         .card p {
+<<<<<<< HEAD
             color: #666;
             margin-bottom: 1.5rem;
             font-size: 0.95rem;
@@ -188,12 +280,73 @@
             .auth-buttons {
                 justify-content: center;
                 width: 100%;
+=======
+            color: #7f8c8d;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .card-btn {
+            background-color: #667eea;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .card-btn:hover {
+            background-color: #764ba2;
+        }
+
+        .hero {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                padding: 0.8rem;
+>>>>>>> 349b643d65a5e6f0ab2f65bd4902ca701b7a9315
             }
 
             .hero h1 {
                 font-size: 2rem;
             }
 
+<<<<<<< HEAD
             .hero p {
                 font-size: 1rem;
             }
@@ -232,11 +385,21 @@
 
             .card-icon {
                 font-size: 2.5rem;
+=======
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .auth-buttons {
+                width: 100%;
+                justify-content: center;
+>>>>>>> 349b643d65a5e6f0ab2f65bd4902ca701b7a9315
             }
         }
     </style>
 </head>
 <body>
+<<<<<<< HEAD
     <!-- Navigation -->
     <nav>
         <div class="logo">🎓 College Info</div>
@@ -294,5 +457,58 @@
             </div>
         </div>
     </div>
+=======
+    <header>
+        <div class="logo">College Info</div>
+        <div class="auth-buttons">
+            <button class="btn btn-login">Login</button>
+            <button class="btn btn-register">Register</button>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#department">Department</a>
+        <a href="#faculty">Faculty</a>
+        <a href="#settings">Settings</a>
+    </nav>
+
+    <div class="container">
+        <div class="hero">
+            <h1>Welcome to College Info Dashboard</h1>
+            <p>Explore departments, faculty information, and manage your settings all in one place</p>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="card" id="home">
+                <h3>🏠 Home</h3>
+                <p>Get started with the College Info platform. View latest updates, announcements, and quick access to all features.</p>
+                <button class="card-btn">View Home</button>
+            </div>
+
+            <div class="card" id="department">
+                <h3>🏢 Department</h3>
+                <p>Explore all academic departments, their programs, and course offerings. Connect with department heads and staff.</p>
+                <button class="card-btn">Browse Departments</button>
+            </div>
+
+            <div class="card" id="faculty">
+                <h3>👨‍🎓 Faculty</h3>
+                <p>Meet our experienced faculty members, view their qualifications, specializations, and office hours.</p>
+                <button class="card-btn">View Faculty</button>
+            </div>
+
+            <div class="card" id="settings">
+                <h3>⚙️ Settings</h3>
+                <p>Manage your profile, preferences, notification settings, and account security options.</p>
+                <button class="card-btn">Go to Settings</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 College Info System. All rights reserved.</p>
+    </footer>
+>>>>>>> 349b643d65a5e6f0ab2f65bd4902ca701b7a9315
 </body>
 </html>

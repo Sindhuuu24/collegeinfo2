@@ -17,14 +17,38 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from teacherinfo.views import landing
+<<<<<<< HEAD
 from teacherinfo. views  import dashboard
 from teacherinfo.views import register
 from teacherinfo.views import registerinfo
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+from teacherinfo.views import registration
+=======
+from teacherinfo.views import dashboard
+>>>>>>> dashboard
+>>>>>>> 349b643d65a5e6f0ab2f65bd4902ca701b7a9315
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('landing/', landing, name='landing'),
+<<<<<<< HEAD
     path('dashboard/', dashboard, name='dashboard'),
     path('register/', register, name='register'),
     path('registerinfo/', registerinfo, name='registerinfo'),
+=======
+<<<<<<< HEAD
+    path('registration/', registration, name='registration'),
+=======
+    path('dashboard/',dashboard,name='dashboard'),
+>>>>>>> dashboard
+=======
+from teacherinfo.views import login
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('landing/', landing, name='landing'),
+    path('login/', login, name='login'),
+>>>>>>> login
+>>>>>>> 349b643d65a5e6f0ab2f65bd4902ca701b7a9315
 ]
