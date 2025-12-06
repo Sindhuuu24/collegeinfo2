@@ -18,9 +18,13 @@ from django.contrib import admin
 from django.urls import path
 from teacherinfo.views import landing
 from teacherinfo. views  import dashboard
+from teacherinfo.views import register
+from teacherinfo.views import registerinfo
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('landing/', landing, name='landing'),
     path('dashboard/', dashboard, name='dashboard'),
+    path('register/', register, name='register'),
+    path('registerinfo/', registerinfo, name='registerinfo'),
 ]
