@@ -1,0 +1,17 @@
+<html>
+    <head>
+    <title>Teacher Registration</title>
+    </head>
+    <body>
+        <form method="post" action="/registerinfo/">
+            {% csrf_token %}
+            <label for="name">name:</label>
+            <input type="text" id="name" placeholder="name" name="name" ><br>
+            <label for="email">email:</label>
+            <input type="email" id="email" placeholder="email" name="email" ><br>
+            <label for="doj">doj:</label>
+            <input type="date" id="doj" placeholder="doj" name="doj" ><br>
+        <button type="submit">Register</button>
+        </form>
+    </body>
+</html>
