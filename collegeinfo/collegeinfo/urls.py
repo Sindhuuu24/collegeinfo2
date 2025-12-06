@@ -17,11 +17,47 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from teacherinfo.views import landing
+<<<<<<< HEAD
 from teacherinfo.views import login, register,registerinfo
+=======
+<<<<<<< HEAD
+from teacherinfo. views  import dashboard
+from teacherinfo.views import register
+from teacherinfo.views import registerinfo
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+from teacherinfo.views import registration
+=======
+from teacherinfo.views import dashboard
+>>>>>>> dashboard
+>>>>>>> 349b643d65a5e6f0ab2f65bd4902ca701b7a9315
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('landing/', landing, name='landing'),
+<<<<<<< HEAD
+    path('dashboard/', dashboard, name='dashboard'),
+    path('register/', register, name='register'),
+    path('registerinfo/', registerinfo, name='registerinfo'),
+=======
+<<<<<<< HEAD
+    path('registration/', registration, name='registration'),
+=======
+    path('dashboard/',dashboard,name='dashboard'),
+>>>>>>> dashboard
+=======
+from teacherinfo.views import login
+>>>>>>> 2014a9498c4241ae716d6c176e77ae9738d34f37
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('landing/', landing, name='landing'),
     path('login/', login, name='login'),
+<<<<<<< HEAD
     path('register/', register, name='register'),
     path('registerinfo/', registerinfo, name='registerinfo'),
+=======
+>>>>>>> login
+>>>>>>> 349b643d65a5e6f0ab2f65bd4902ca701b7a9315
+>>>>>>> 2014a9498c4241ae716d6c176e77ae9738d34f37
 ]
