@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .settings-section {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .settings-section:last-child {
+            border-bottom: none;
+        }
+
+        .settings-section h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+        }
+
+        .setting-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .setting-item:last-child {
+            border-bottom: none;
+        }
+
+        .setting-label {
+            flex: 1;
+        }
+
+        .setting-label p {
+            color: #666;
+            font-size: 0.95em;
+            margin-top: 5px;
+        }
+
+        .toggle {
+            position: relative;
+            width: 50px;
+            height: 26px;
+            background-color: #ccc;
+            border-radius: 13px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .toggle.active {
+            background-color: #667eea;
+        }
+
+        .toggle::after {
+            content: '';
+            position: absolute;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background-color: white;
+            top: 2px;
+            left: 2px;
+            transition: 0.3s;
+        }
+
+        .toggle.active::after {
+            left: 26px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            background-color: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #5568d3;
+        }
+
+        .btn-secondary {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .btn-secondary:hover {
+            background-color: #e0e0e0;
+        }
+
+        input[type="email"],
+        input[type="text"],
+        select {
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        input[type="email"]:focus,
+        input[type="text"]:focus,
+        select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>⚙️ Settings</h1>
+            <p>Manage your collegeinfo preferences</p>
+        </div>
+
+        <div class="content">
+            <!-- Account Settings -->
+            <div class="settings-section">
+                <h2>👤 Account Settings</h2>
+                <div class="setting-item">
+                    <div class="setting-label">
+                        <strong>Email Address</strong>
+                        <p>Update your email</p>
+                    </div>
+                    <input type="email" placeholder="your@email.com">
+                </div>
+                <div class="setting-item">
+                    <div class="setting-label">
+                        <strong>Full Name</strong>
+                        <p>Update your profile name</p>
+                    </div>
+                    <input type="text" placeholder="Your Name">
+                </div>
+            </div>
+
+            <!-- Notification Settings -->
+            <div class="settings-section">
+                <h2>🔔 Notifications</h2>
+                <div class="setting-item">
+                    <div class="setting-label">
+                        <strong>Email Notifications</strong>
+                        <p>Receive updates via email</p>
+                    </div>
+                    <div class="toggle active" onclick="this.classList.toggle('active')"></div>
+                </div>
+                <div class="setting-item">
+                    <div class="setting-label">
+                        <strong>Course Updates</strong>
+                        <p>Get notified about course changes</p>
+                    </div>
+                    <div class="toggle" onclick="this.classList.toggle('active')"></div>
+                </div>
+            </div>
+
+            <!-- Privacy Settings -->
+            <div class="settings-section">
+                <h2>🔒 Privacy & Security</h2>
+                <div class="setting-item">
+                    <div class="setting-label">
+                        <strong>Profile Visibility</strong>
+                        <p>Control who can see your profile</p>
+                    </div>
+                    <select>
+                        <option>Public</option>
+                        <option>Private</option>
+                        <option>Friends Only</option>
+                    </select>
+                </div>
+                <div class="setting-item">
+                    <div class="setting-label">
+                        <strong>Two-Factor Authentication</strong>
+                        <p>Enhanced security for your account</p>
+                    </div>
+                    <div class="toggle" onclick="this.classList.toggle('active')"></div>
+                </div>
+            </div>
+
+            <!-- Theme Settings -->
+            <div class="settings-section">
+                <h2>🎨 Appearance</h2>
+                <div class="setting-item">
+                    <div class="setting-label">
+                        <strong>Theme</strong>
+                        <p>Choose your preferred theme</p>
+                    </div>
+                    <select>
+                        <option>Light</option>
+                        <option>Dark</option>
+                        <option>Auto</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="btn-group">
+                <button class="btn btn-primary">Save Changes</button>
+                <button class="btn btn-secondary">Cancel</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

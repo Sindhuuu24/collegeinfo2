@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty - College Info</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .faculty-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .faculty-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .faculty-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .faculty-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3em;
+        }
+
+        .faculty-info {
+            padding: 20px;
+        }
+
+        .faculty-name {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .faculty-title {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .faculty-details {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        .faculty-details p {
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .contact-info a {
+            color: #667eea;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #764ba2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Our Faculty</h1>
+            <p class="subtitle">Meet our experienced and dedicated educators</p>
+        </header>
+
+        <div class="faculty-grid">
+            <div class="faculty-card">
+                <div class="faculty-image">👨‍🏫</div>
+                <div class="faculty-info">
+                    <div class="faculty-name">Dr. John Smith</div>
+                    <div class="faculty-title">Professor of Computer Science</div>
+                    <div class="faculty-details">
+                        <p>PhD in Computer Science with 15+ years of teaching experience.</p>
+                    </div>
+                    <div class="contact-info">
+                        <p>📧 <a href="mailto:john@college.edu">john@college.edu</a></p>
+                        <p>📞 (555) 123-4567</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <div class="faculty-image">👩‍🏫</div>
+                <div class="faculty-info">
+                    <div class="faculty-name">Dr. Sarah Johnson</div>
+                    <div class="faculty-title">Associate Professor of Mathematics</div>
+                    <div class="faculty-details">
+                        <p>PhD in Mathematics with expertise in Algebra and Topology.</p>
+                    </div>
+                    <div class="contact-info">
+                        <p>📧 <a href="mailto:sarah@college.edu">sarah@college.edu</a></p>
+                        <p>📞 (555) 234-5678</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <div class="faculty-image">👨‍🎓</div>
+                <div class="faculty-info">
+                    <div class="faculty-name">Prof. Michael Chen</div>
+                    <div class="faculty-title">Assistant Professor of Physics</div>
+                    <div class="faculty-details">
+                        <p>MS in Physics with 8 years of research and teaching experience.</p>
+                    </div>
+                    <div class="contact-info">
+                        <p>📧 <a href="mailto:michael@college.edu">michael@college.edu</a></p>
+                        <p>📞 (555) 345-6789</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <div class="faculty-image">👩‍🔬</div>
+                <div class="faculty-info">
+                    <div class="faculty-name">Dr. Emily Davis</div>
+                    <div class="faculty-title">Professor of Biology</div>
+                    <div class="faculty-details">
+                        <p>PhD in Molecular Biology with focus on genetic research.</p>
+                    </div>
+                    <div class="contact-info">
+                        <p>📧 <a href="mailto:emily@college.edu">emily@college.edu</a></p>
+                        <p>📞 (555) 456-7890</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <div class="faculty-image">👨‍💼</div>
+                <div class="faculty-info">
+                    <div class="faculty-name">Prof. Robert Wilson</div>
+                    <div class="faculty-title">Associate Professor of Economics</div>
+                    <div class="faculty-details">
+                        <p>MBA and 12+ years experience in economic policy research.</p>
+                    </div>
+                    <div class="contact-info">
+                        <p>📧 <a href="mailto:robert@college.edu">robert@college.edu</a></p>
+                        <p>📞 (555) 567-8901</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <div class="faculty-image">👩‍💻</div>
+                <div class="faculty-info">
+                    <div class="faculty-name">Dr. Jessica Martinez</div>
+                    <div class="faculty-title">Assistant Professor of Data Science</div>
+                    <div class="faculty-details">
+                        <p>PhD in Statistics with expertise in machine learning applications.</p>
+                    </div>
+                    <div class="contact-info">
+                        <p>📧 <a href="mailto:jessica@college.edu">jessica@college.edu</a></p>
+                        <p>📞 (555) 678-9012</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
