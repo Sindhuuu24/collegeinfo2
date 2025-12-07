@@ -25,6 +25,7 @@ from teacherinfo.views import registerinfo
 from teacherinfo.views import login
 from teacherinfo.views import home
 from teacherinfo.views import department
+from teacherinfo.views import search_teachers
 
 
 urlpatterns = [
@@ -40,4 +41,5 @@ urlpatterns = [
     path('login/', login, name='login'),
     path('home/', home, name='home'),
     path('department/', department, name='department'),
+    path('search_teachers/', search_teachers, name='search_teachers'),
 ]
