@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty - College Info</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+            animation: slideDown 0.6s ease-out;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .faculty-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .faculty-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        .faculty-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .faculty-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 60px;
+        }
+
+        .faculty-content {
+            padding: 25px;
+        }
+
+        .faculty-content h3 {
+            color: #333;
+            font-size: 1.4em;
+            margin-bottom: 8px;
+        }
+
+        .faculty-content .designation {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 12px;
+            font-size: 0.95em;
+        }
+
+        .faculty-content .department {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .faculty-content p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            font-size: 0.95em;
+        }
+
+        .contact-info {
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+            margin-top: 15px;
+        }
+
+        .contact-info p {
+            margin-bottom: 8px;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .contact-info strong {
+            color: #333;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95em;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.2);
+            color: white;
+            text-align: center;
+            padding: 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .faculty-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+            }
+
+            .faculty-content {
+                padding: 20px;
+            }
+
+            header {
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            header p {
+                font-size: 0.95em;
+            }
+
+            .faculty-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .faculty-image {
+                height: 200px;
+                font-size: 50px;
+            }
+
+            .faculty-content h3 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>👨‍🏫 Our Faculty</h1>
+            <p>Meet our experienced and dedicated teaching team</p>
+        </header>
+
+        <div class="faculty-grid">
+            <!-- Faculty Card 1 -->
+            <div class="faculty-card">
+                <div class="faculty-image">👨‍💼</div>
+                <div class="faculty-content">
+                    <h3>Dr. John Smith</h3>
+                    <div class="designation">Professor</div>
+                    <div class="department">Department of Computer Science</div>
+                    <p>Specializes in Artificial Intelligence and Machine Learning with 15+ years of experience.</p>
+                    <div class="contact-info">
+                        <p><strong>Email:</strong> john.smith@college.edu</p>
+                        <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                    </div>
+                    <button class="btn">View Profile</button>
+                </div>
+            </div>
+
+            <!-- Faculty Card 2 -->
+            <div class="faculty-card">
+                <div class="faculty-image">👩‍🏫</div>
+                <div class="faculty-content">
+                    <h3>Dr. Emily Johnson</h3>
+                    <div class="designation">Associate Professor</div>
+                    <div class="department">Department of Mathematics</div>
+                    <p>Expert in Advanced Calculus and Numerical Analysis. Published 20+ research papers.</p>
+                    <div class="contact-info">
+                        <p><strong>Email:</strong> emily.johnson@college.edu</p>
+                        <p><strong>Phone:</strong> +1 (555) 234-5678</p>
+                    </div>
+                    <button class="btn">View Profile</button>
+                </div>
+            </div>
+
+            <!-- Faculty Card 3 -->
+            <div class="faculty-card">
+                <div class="faculty-image">👨‍🔬</div>
+                <div class="faculty-content">
+                    <h3>Prof. Michael Brown</h3>
+                    <div class="designation">Assistant Professor</div>
+                    <div class="department">Department of Physics</div>
+                    <p>Focused on Quantum Physics and Laboratory-based learning methodologies.</p>
+                    <div class="contact-info">
+                        <p><strong>Email:</strong> michael.brown@college.edu</p>
+                        <p><strong>Phone:</strong> +1 (555) 345-6789</p>
+                    </div>
+                    <button class="btn">View Profile</button>
+                </div>
+            </div>
+
+            <!-- Faculty Card 4 -->
+            <div class="faculty-card">
+                <div class="faculty-image">👩‍🔬</div>
+                <div class="faculty-content">
+                    <h3>Dr. Sarah Williams</h3>
+                    <div class="designation">Professor</div>
+                    <div class="department">Department of Chemistry</div>
+                    <p>Specializes in Organic Chemistry and Sustainable Research Practices.</p>
+                    <div class="contact-info">
+                        <p><strong>Email:</strong> sarah.williams@college.edu</p>
+                        <p><strong>Phone:</strong> +1 (555) 456-7890</p>
+                    </div>
+                    <button class="btn">View Profile</button>
+                </div>
+            </div>
+
+            <!-- Faculty Card 5 -->
+            <div class="faculty-card">
+                <div class="faculty-image">👨‍🎓</div>
+                <div class="faculty-content">
+                    <h3>Prof. David Martinez</h3>
+                    <div class="designation">Lecturer</div>
+                    <div class="department">Department of English Literature</div>
+                    <p>Passionate about Contemporary Literature and Creative Writing workshops.</p>
+                    <div class="contact-info">
+                        <p><strong>Email:</strong> david.martinez@college.edu</p>
+                        <p><strong>Phone:</strong> +1 (555) 567-8901</p>
+                    </div>
+                    <button class="btn">View Profile</button>
+                </div>
+            </div>
+
+            <!-- Faculty Card 6 -->
+            <div class="faculty-card">
+                <div class="faculty-image">👩‍🎓</div>
+                <div class="faculty-content">
+                    <h3>Dr. Rachel Green</h3>
+                    <div class="designation">Associate Professor</div>
+                    <div class="department">Department of History</div>
+                    <p>Expertise in Modern History and Interactive Teaching Methods.</p>
+                    <div class="contact-info">
+                        <p><strong>Email:</strong> rachel.green@college.edu</p>
+                        <p><strong>Phone:</strong> +1 (555) 678-9012</p>
+                    </div>
+                    <button class="btn">View Profile</button>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 College Info - Faculty Management System. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
