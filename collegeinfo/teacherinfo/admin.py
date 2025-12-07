@@ -1,6 +1,6 @@
 from django.contrib import admin
 <<<<<<< HEAD
-from .models import TeacherInfo
+from .models import TeacherInfocd
 admin.site.register(TeacherInfo)
 =======
 from .models import Teacherinfo
