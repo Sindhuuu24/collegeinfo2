@@ -37,5 +37,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('landing/', landing, name='landing'),
     path('login/', login, name='login'),
-    path('home', home, name='home'),
+    path('home/', home, name='home'),
 ]
