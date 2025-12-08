@@ -22,3 +22,11 @@ def dashboard(request):
     return render(request,'dashboard.html')
 def login(request):
     return render(request, 'login.html')
+def faculty(request):
+    return render(request,'faculty.html')
+def settings(request):
+    return render(request,'settings.html')
+def home(request):
+    return render(request,'home.html')
+def department(request):
+    return render(request,'department.html')

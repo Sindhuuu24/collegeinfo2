@@ -26,8 +26,8 @@ from teacherinfo.views import dashboard
 from teacherinfo.views import register
 from teacherinfo.views import registerinfo
 from teacherinfo.views import login
-from teacherinfo.views import home
-from teacherinfo.views import department,settings,faculty
+from teacherinfo.views import home,department,settings,faculty
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('landing/', landing, name='landing'),
@@ -38,5 +38,7 @@ urlpatterns = [
     path('dashboard/',dashboard,name='dashboard'),
     path('faculty/',faculty,name='faculty'),
     path('settings/',settings,name='settings'),
+    path('home/',home,name='home'),
+    path('department/',department,name='department'),
 ]
 

@@ -1,5 +1,5 @@
 from django.db import models
-class TeacherInfo(models.Model):
+class Teacherinfo(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField(unique=True)
     date_of_joining = models.DateField()
